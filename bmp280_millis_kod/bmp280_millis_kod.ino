@@ -1,6 +1,9 @@
 #include <Wire.h>
+
 #include <Adafruit_BMP280.h>
+
 #include "I2Cdev.h" //I2C kütüphanesi
+
 Adafruit_BMP280 bmp; 
 
 unsigned long SimdikiZaman = 0;
@@ -9,6 +12,7 @@ int aralik = 999;
 
 void setup()
 {
+  
   Serial.begin(9600);
   bmp.begin();
   bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */ /* MODE_FORCED */
@@ -19,6 +23,7 @@ void setup()
 }
 
 void loop() {
+  
   SimdikiZaman = millis();
   if  (SimdikiZaman - OncekiZaman > aralik)
   {
