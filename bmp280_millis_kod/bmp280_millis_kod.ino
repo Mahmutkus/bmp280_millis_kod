@@ -14,7 +14,9 @@ void setup()
 {
   
   Serial.begin(9600);
+  
   bmp.begin();
+  
   bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */ /* MODE_FORCED */
                   Adafruit_BMP280::SAMPLING_X2,     /* Temp. oversampling */ /* SAMPLING_X2 , SAMPLING_X16 */
                   Adafruit_BMP280::SAMPLING_X16,    /* Pressure oversampling */
